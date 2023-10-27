@@ -21,25 +21,23 @@ function randVal(myVal, other){
 
 // end function randVal
 
-var colors = ['#5999f1','#26b85d','#375ca4','#f4e736',' #f366d8','#fa590c'];
+let colors = ['#5999f1','#26b85d','#375ca4','#f4e736',' #f366d8','#fa590c'];
 
-var size = [50,40,30,20,25];
-
-let form1 = 
+let size = [50,40,30,20,25];
 
 window.onmousemove = function(e){
-    var x = e.clientX ;
-    var y = e.clientY ;
-    var cl = ['one','two','three','four'];
+    let x = e.clientX ;
+    let y = e.clientY ;
+    let cl = ['one','two','three','four'];
         for(i = 0 ; i < 1 ; i++){
-            var rSize = randVal(size) ;
-            var elm = document.createElement('div');
+            let rSize = randVal(size) ;
+            let elm = document.createElement('div');
             elm.style.left = x - randVal(50) + "px";
             elm.style.top = y - randVal(50) + "px";
             elm.className = "mydiv" + " " + randVal(cl);
             elm.style.backgroundColor = randVal(colors);
               // Générer des valeurs aléatoires pour border-radius
-            var borderRadius = randVal(101) + '% ' + randVal(101) + '% ' + randVal(101) + '% ' + randVal(101) + '% / ' +
+            let borderRadius = randVal(101) + '% ' + randVal(101) + '% ' + randVal(101) + '% ' + randVal(101) + '% / ' +
             randVal(101) + '% ' + randVal(101) + '% ' + randVal(101) + '% ' + randVal(101) + '%';
             elm.style.borderRadius = borderRadius;
             elm.style.height = rSize + "px";
@@ -50,10 +48,10 @@ window.onmousemove = function(e){
 }
 
 
-var mydiv = document.getElementsByClassName("mydiv");
-var bd =document.body;
+let mydiv = document.getElementsByClassName("mydiv");
+let bd =document.body;
 
-var bdColors = ['#bbb7e7','#fec5ce','# #a7a709','#b7d5ff','#52a793','#dceb9c','#343c89'];
+let bdColors = ['#bbb7e7','#fec5ce','# #a7a709','#b7d5ff','#52a793','#dceb9c','#343c89'];
 
 setInterval(function(){
     for(x = 0 ; x < mydiv.length ; x++){
